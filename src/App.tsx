@@ -1,49 +1,39 @@
 import React, { Component } from 'react';
+import { View } from 'react-native';
+import { Provider } from 'react-redux'
+import firebase from "firebase";
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import LoginForm from "./components/loginForm";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Ionicons from "react-native-vector-icons";
-import MainPage from "./components/mainPage";
-import Messages from "./components/messages";
-import Search from "./components/search";
-import Notifications from "./components/notifications";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
+import { Navigate } from "./components/navigate";
+import { PersistGate } from "redux-persist/es/integration/react";
+import {store,persitedStore} from "./components/common/store.js"
 
-
-const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
 
 class App extends Component {
-    state = {
-        loggedIn: false
+    componentDidMount() {
+        const firebaseConfig = {
+            apiKey: "AIzaSyA9VohDAvIeGRtkOoPPe3HKq4I2qUrIn_I",
+            authDomain: "twitter-clone-773f6.firebaseapp.com",
+            databaseURL: "https://twitter-clone-773f6.firebaseio.com",
+            projectId: "twitter-clone-773f6",
+            storageBucket: "twitter-clone-773f6.appspot.com",
+            messagingSenderId: "88142789981",
+            appId: "1:88142789981:web:9ffa6ee1047f88ee057cb4",
+            measurementId: "G-W4JDDHH0W4"
+        };
+        firebase.initializeApp(firebaseConfig);
     }
-    render() {
-        const { loggedIn } = this.state;
-        const content = loggedIn ? (
-            <>
-                <Stack.Navigator
-                    screenOptions={{
-                        headerShown: false
-                    }}
-                >
-                    <Stack.Screen name="Home" component={LoginForm} />
-                </Stack.Navigator>
-            </>
-        ) : (
-                <>
-                    <Tab.Navigator>
-                        <Tab.Screen name="Main" component={MainPage} />
-                        <Tab.Screen name="Search" component={Search} />
-                    </Tab.Navigator>
-                </>
-            )
+    render() {                          
         return (
-            <NavigationContainer>
-                {content}
-            </NavigationContainer>
+            <Provider store={store}>
+                <PersistGate persistor = {persitedStore} loading = {null}>
+                    <Navigate />
+                </PersistGate>
+
+            </Provider>
         );
     }
 }
+
+
 
 export default App;

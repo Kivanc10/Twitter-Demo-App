@@ -1,14 +1,25 @@
 import React, { Component } from "react";
 import { Text, View, Image, StyleSheet } from "react-native";
+import {connect} from "react-redux";
 
 class Messages extends Component{
     render() {
         return (
-            <View style={{flex:1,justifyContent:"center",alignContent:"center"}}>
-                <Text>Search.js</Text>
+            <View style={styles.container}>
+                <Text>Messages.js</Text>
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container : {
+        flex : 1,
+        justifyContent : "center",
+        alignItems : "center"
+    }
+})
+
+
 
 export default Messages;

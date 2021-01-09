@@ -4,11 +4,19 @@ import { Text, View, Image, StyleSheet } from "react-native";
 class Notifications extends Component{
     render() {
         return (
-            <View style={{flex:1,justifyContent:"center",alignContent:"center"}}>
+            <View style={styles.container}>
                 <Text>Notifications.js</Text>
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container : {
+        flex : 1,
+        justifyContent : "center",
+        alignItems : "center"
+    }
+})
 
 export default Notifications;
