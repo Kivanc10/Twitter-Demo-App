@@ -18,13 +18,22 @@ class NewTweet extends Component {
         const { user } = this.props;
         return (
             <View style={styles.newTweetContainer}>
+               
                 <View style={styles.userStyle}>
-                <Text style={styles.userTextStyle}>{user}</Text>
+                <Text 
+                onPress = {() => this.props.navigation.navigate("UserSelfPage",{
+                    user_name : this.props.user
+                })}
+                style={styles.userTextStyle}>{user}</Text>
                 </View>
-                <TextArea
-                    placeholder="Type something"
-                    onChangeText={this.onTweetChanged.bind(this)}
+               <View style = {styles.areaStyle}>
+               <TextArea
+                    placeholder="Bir şeyler yaz ..."
+                    onChangeText={this.onTweetChanged.bind(this)}   
+                    numberOfLines = {20}
+                    multiline={true}
                 />
+               </View>
                 <MyButton
                     onPress={this.onSendTweet.bind(this)}
                     text="Send Tweet"
@@ -38,20 +47,32 @@ class NewTweet extends Component {
 const styles = StyleSheet.create({
     newTweetContainer: {
         flex: 1,
-        padding: 25
+        padding: 25,
+        borderWidth : 1
     },
     userStyle : {
         backgroundColor : "rgb(29,161,242)",
         borderRadius : 15,
         padding : 3,
         marginTop : 15,
-        width : "50%"
+        width : "80%",
+        marginBottom : 15
     },
     userTextStyle : {
         color : "white",
         fontWeight : "bold",
         fontSize : 15,
-        padding : 8
+        padding : 8,
+         
+    },
+    userButton : {
+        margin : 20
+    },
+    areaStyle : {
+        borderWidth : 1,
+        borderRadius : 25,
+        paddingTop : 20,        
+        alignItems : "center"
     }
 })
 

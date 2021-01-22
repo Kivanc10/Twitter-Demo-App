@@ -8,6 +8,11 @@ import { withNavigation } from 'react-navigation';
 import * as NavigationServices from "../navigationServices";
 
 class LoginForm extends Component {
+
+    componentDidMount() {
+        this.props.loggedIn ? (NavigationServices.navigate("Inside")) : (null);
+    }
+
     onEmailChanged(text) {
         this.props.emailChanged(text);
     }
@@ -20,11 +25,14 @@ class LoginForm extends Component {
     }
  
     render() {
-        const { loading, error ,loggedIn} = this.props;
+        const { loading, error} = this.props;
         const errorMsg = error ? (
             <Text style={styles.errorStyle}>{error}</Text>
         ) : null;
         
+        const user_text = this.props.loggedIn ? (this.props.user.user.email) : (this.props.email);
+        const user_password = this.props.loggedIn ? (this.props.user.password) : (this.props.password);
+        const try_1 = <Text>{this.props.email}</Text>
         return (
             <View style={{ flex: 1 }}>
                 <View style={styles.section1}>
@@ -37,14 +45,14 @@ class LoginForm extends Component {
                     <Input
                         text="Telefon, e-posta veya kullanıcı adı"
                         onChangeText={this.onEmailChanged.bind(this)}
-                        value={this.props.loggedIn ? this.props.user.user.email : this.props.email}                                               
+                        value={user_text}                                               
                     />
 
                     <Input
                         text="Şifre"
                         onChangeText={this.onPasswordChanged.bind(this)}
                         secureTextEntry
-                        value={this.props.password}
+                        value={user_password}
                     />
                 </View>
                 <View style={styles.buttonWrapper}>

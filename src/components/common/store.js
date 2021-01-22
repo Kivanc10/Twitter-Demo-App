@@ -9,7 +9,7 @@ import reducers from "../../reducers";
 const persistConfig = {
     key: 'root',
     storage: AsyncStorage,
-    whitelist: ['auth.user'], // which reducer want to store
+    whitelist: ['auth'], // which reducer want to store
     //blacklist : ["auth.error"]
 };
 

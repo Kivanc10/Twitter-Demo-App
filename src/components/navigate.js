@@ -12,6 +12,7 @@ import NewTweet from "./newTweet";
 import Notifications from "./notifications";
 import {navigationRef} from "../navigationServices";
 import UpdateTweet from "./updateTweet";
+import UserSelfPage from "./userSelfPage";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -68,6 +69,7 @@ const Navigate = ({ navigation }) => {
             <Stack.Screen name="Inside" component={LoggedInTabs} />
             <Stack.Screen name="NewTweet" component = {NewTweet} />
             <Stack.Screen name="UpdateTweet" component = {UpdateTweet} />
+            <Stack.Screen name="UserSelfPage" component = {UserSelfPage} />
         </Stack.Navigator>
 
         </NavigationContainer>

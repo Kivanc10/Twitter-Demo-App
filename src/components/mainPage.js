@@ -4,7 +4,7 @@ import * as NavigationServices from "../navigationServices";
 import { connect } from "react-redux";
 import { fetchTweet } from "../actions";
 import { Card,TwitHeader } from "./common";
-import _, { random, range } from 'lodash';
+import _ from 'lodash';
 import { FlatList, TouchableHighlight } from "react-native-gesture-handler";
 import { cos } from "react-native-reanimated";
 // this.props.navigation.navigate
@@ -40,9 +40,7 @@ class MainPage extends Component {
                     keyExtractor={(item) => item.uid}
                 />
                 <View style={styles.penStyle}>
-                    <TouchableHighlight style={styles.textTweetStyle} onPress={() => NavigationServices.navigate("NewTweet",{
-                        params : item
-                    })}>
+                    <TouchableHighlight style={styles.textTweetStyle} onPress={() => NavigationServices.navigate("NewTweet")}>
                         <Image source={require("../../assets/original.png")} style={styles.tweetImage} />
                     </TouchableHighlight>
                 </View>

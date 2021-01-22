@@ -5,6 +5,7 @@ import { TextArea, MyButton } from "./common";
 import { tweetChanged,updateTweet } from "../actions";
 import { connect } from "react-redux"
 
+
 /*
 import {connect} from "react-redux";
 import {updateTweet} from "../actions";
@@ -35,15 +36,23 @@ class UpdateTweet extends Component {
     }
 
     render() {
-        const { route , tweetForm} = this.props;
-                
+        const { route , tweetForm,user} = this.props;
+        const tweet_writer = this.props.route.params.tweet.email
         return (
             <View style={styles.container}>
+                <View style={styles.userNameStyle}>
+                <Text 
+                style = {styles.userMail}
+                onPress = {() => this.props.navigation.navigate("UserSelfPage",{
+                    user_name : tweet_writer
+                })}>{tweet_writer}</Text>
+                </View>
                 <View style={styles.text_area_style}>
                     <TextArea
                         onChangeText={this.onChangeTweet.bind(this)}
                         multiline={true}
                         value={tweetForm.tweet}
+                        numberOfLines = {20}
                     />
                 </View>
                 <View style={styles.update_btn_style}>
@@ -78,19 +87,36 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "black",
         borderRadius: 20,
-        alignItems: "center"
+        alignItems: "center",
+        paddingTop : 15
     },
     update_btn_style: {
 
     },
     delete_btn_style: {
 
+    },
+    userNameStyle : {
+        backgroundColor : "rgb(29,161,242)",
+        borderRadius : 15,
+        padding : 3,
+        marginTop : 15,
+        width : "70%",        
+        padding : 10,
+        alignItems : "center",
+        paddingBottom : 10,
+        marginBottom : 15
+    },
+    userMail : {
+        color : "white",
+        fontWeight : "bold"
     }
 })
 
 const mapStateToProps = (state) => {
     return {
-        tweetForm: state.TweetForm
+        tweetForm: state.TweetForm,
+        user: state.auth.user.user.email
     }
 }
 

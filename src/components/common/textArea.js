@@ -1,7 +1,7 @@
 import {View,TextInput,StyleSheet} from "react-native";
 import React from "react";
 
-const TextArea = ({onChangeText,placeholder,value,multiline}) => {
+const TextArea = ({onChangeText,placeholder,value,multiline,numberOfLines}) => {
     return (
         <View styles={styles.textAreaStyles}>
             <TextInput 
@@ -10,7 +10,7 @@ const TextArea = ({onChangeText,placeholder,value,multiline}) => {
             onChangeText={onChangeText}
             value = {value}
             styles = {styles.inputStyle}
-            numberOfLines = {10}
+            numberOfLines = {numberOfLines}
             placeholderTextColor = "gray"
         />
         </View>
