@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet ,TextInput} from "react-native";
 import {connect} from "react-redux";
 
 class Messages extends Component{
@@ -7,6 +7,7 @@ class Messages extends Component{
         return (
             <View style={styles.container}>
                 <Text>Messages.js</Text>
+                
             </View>
         )
     }
@@ -17,6 +18,9 @@ const styles = StyleSheet.create({
         flex : 1,
         justifyContent : "center",
         alignItems : "center"
+    },
+    searchFieldStyle : {
+
     }
 })
 

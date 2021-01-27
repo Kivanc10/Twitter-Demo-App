@@ -46,7 +46,10 @@ function LoggedInTabs() {
         tabBarOptions={{
             activeTintColor: 'rgb(29,161,242)',
             inactiveTintColor: 'gray',
-            showLabel: false
+            showLabel: false,
+            style : {
+                backgroundColor : "black"
+            }          
         }}
     >
         <Tab.Screen name="Main" component={MainPage} />

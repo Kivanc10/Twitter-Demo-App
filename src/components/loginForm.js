@@ -6,11 +6,17 @@ import {emailChanged,passwordChanged,loginUser} from "../actions";
 import {connect} from "react-redux";
 import { withNavigation } from 'react-navigation';
 import * as NavigationServices from "../navigationServices";
+import  { createFilter } from 'react-native-search-filter';
+
 
 class LoginForm extends Component {
 
     componentDidMount() {
         this.props.loggedIn ? (NavigationServices.navigate("Inside")) : (null);
+        const user_text = this.props.loggedIn ? (this.props.user.user.email).trim() : (this.props.email).trim();
+
+        this.onEmailChanged(user_text);
+
     }
 
     onEmailChanged(text) {
@@ -30,7 +36,7 @@ class LoginForm extends Component {
             <Text style={styles.errorStyle}>{error}</Text>
         ) : null;
         
-        const user_text = this.props.loggedIn ? (this.props.user.user.email) : (this.props.email);
+        //const user_text = this.props.loggedIn ? (this.props.user.user.email) : (this.props.email);
         const user_password = this.props.loggedIn ? (this.props.user.password) : (this.props.password);
         const try_1 = <Text>{this.props.email}</Text>
         return (
@@ -45,7 +51,7 @@ class LoginForm extends Component {
                     <Input
                         text="Telefon, e-posta veya kullanıcı adı"
                         onChangeText={this.onEmailChanged.bind(this)}
-                        value={user_text}                                               
+                        value={this.props.email}                                               
                     />
 
                     <Input

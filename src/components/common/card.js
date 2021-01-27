@@ -8,11 +8,12 @@ const Card = (props) => {
     const myIcon1 = <Icon name="comments" size={20} color="gray" style={styles.icon1}/>;
     const myIcon2 = <Icon name="retweet" size={20} color="gray" style={styles.icon1}/>;
     const myIcon3 = <Icon name="heart" size={20} color="gray" style={styles.icon1}/>;
+    //let num = parseInt((Math.random*10)+3);
     return (
         <View style= {styles.cardWrapper}>
             <View style = {styles.cardWrapper_two}>
             <View style={styles.imageStyle}>
-            <Image source = {require("../../../assets/twitterEgg.jpg")}  style={styles.image}/>
+            <Image source = {require("../../../assets/6.jpg")}  style={styles.image}/>
             </View>
             <View style={styles.textStyle}>
                 {props.children}

@@ -20,7 +20,7 @@ class MainPage extends Component {
         const tweet_name = (item.tweet.tweet == undefined) ? (item.tweet) : (item.tweet.tweet);
         return (
             <TouchableOpacity key={item.uid} onPress = {() => NavigationServices.navigate("UpdateTweet",{ tweet: item })}>
-                <Card >
+                <Card>
                     <Text style={styles.userName}>{item.email}</Text>
                     <Text>{tweet_name}</Text>
                 </Card>
@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: 20,
-        margin: 20
+        margin: 20,
+        //backgroundColor : "black"
     },
     tweetImage: {
         borderRadius: 25,

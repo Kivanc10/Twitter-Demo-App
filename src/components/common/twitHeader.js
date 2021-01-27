@@ -23,15 +23,17 @@ const TwitHeader = () => {
 const styles = StyleSheet.create({
     containerStyle : {
      paddingBottom : 10,
+     paddingTop : 10,
      borderBottomWidth : 5,      
-    borderBottomColor : "aliceblue"
+    borderBottomColor : "aliceblue",
+    //backgroundColor : "black"
     },
     imagesStyle : {
         flexDirection : "row",
         justifyContent: "space-around"
     },
     image_one : {        
-     
+     marginLeft : -32
     },
     pic_two : {
         width : 25,
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
         
     },
     image_three : {
-      
+      marginRight : -30
     }
 })
 
