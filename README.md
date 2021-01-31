@@ -88,6 +88,15 @@ const loginSuccess = (dispatch, user) => {
         ...
 ```
 
+- redux persist using 
+```JavaScript
+const persistConfig = {
+    key: 'root',
+    storage: AsyncStorage,
+    whitelist: ['auth']
+};
+```
+
 *Some inabilities according to Real Twitter:*
 - Notifications and Messages are not dynamic
 - Some dataframe operations might be slowly because of the *firebase*
@@ -141,7 +150,7 @@ const loginSuccess = (dispatch, user) => {
   }
 ```
 
-- git `clone my_git_addresss`
+- git `https://github.com/Kivanc10/linux_files.git`
 - verify to whether npm have already installed `node –v`
 - `npm install --global yarn` 
 - If you have not expo `npm install -g expo-cli` or `yarn global add expo-cli`
