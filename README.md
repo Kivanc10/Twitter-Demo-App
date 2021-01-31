@@ -76,7 +76,7 @@ this.props.navigation.navigate("Inside",{
 
 
 
-<img src="https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210128-010050-1.gif" align="right" width = "33%" height = 650 />
+<img src="https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210128-010050-1.gif" align="left" width = "33%" height = 650 />
 
 
 
@@ -84,4 +84,4 @@ this.props.navigation.navigate("Inside",{
 
 
 
- <img src="https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210127-204928-1.gif" align="right" width = "33%" height = 650 />
+
