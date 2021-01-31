@@ -69,7 +69,22 @@ this.props.navigation.navigate("Inside",{
     <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = "300" height = 650 /></td>
    </tr>
   
+  <tr>
+    <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = "300" height = 650 /></td>
+  <td><img src="https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210128-010050-1.gif" align="right" width = "300" height = 650 /></td>
+  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210128-005807.jpg" align="left" width = "300" height = 650 /></td>
+  </tr>
   
+  <tr>
+  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210127-204928-1.gif" align="right" width = "300" height = 650 /></td>
+  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013641.jpg" align="left" width = "300" height = 650 /></td>
+  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012652.jpg" align="right" width = "300" height = 650 /></td>
+  </tr>
+  
+  <tr>
+  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013626.jpg" align="left" width = "300" height = 650 /></td>
+  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/IMG_20210128_005721.jpg" align="right" width = "33%" height = 650 /></td>
+  </tr>
   </table>
  
  
@@ -77,28 +92,25 @@ this.props.navigation.navigate("Inside",{
 
 
 
-<img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = "33%" height = 650 />
-
-
-
-<img src="https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210128-010050-1.gif" align="right" width = "33%" height = 650 />
-
-
-<img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210128-005807.jpg" align="left" width = "33%" height = 650 />
-
-<img src = "https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210127-204928-1.gif" align="right" width = "33%" height = 650 />
 
 
 
 
 
-<img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013641.jpg" align="left" width = "33%" height = 650 />
-
-
-<img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012652.jpg" align="right" width = "33%" height = 650 />
-
-<img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013626.jpg" align="left" width = "33%" height = 650 />
 
 
 
-<img src= "https://github.com/Kivanc10/linux_files/blob/master/img/IMG_20210128_005721.jpg" align="right" width = "33%" height = 650 />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
