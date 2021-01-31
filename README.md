@@ -41,6 +41,16 @@ export function navigate(name, params) {
         >
 ````
 
+- Routing main page after the wrote tweet
+```JavaScript
+const loginSuccess = (dispatch, user) => {
+    dispatch({
+        type: USER_SUCCESS,
+        payload: user
+    })
+    NavigationServices.navigate("Inside");
+}
+```
 
 - Also,I've added tabbar navigation with *react-navigation*
 ```JavaScript
