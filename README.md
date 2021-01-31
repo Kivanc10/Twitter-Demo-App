@@ -20,6 +20,28 @@ this.props.navigation.navigate("Inside",{
 </Text>
 
 ```
+
+- Or you can use NavigationServices to routing
+```JavaScript
+import * as React from 'react';
+
+export const navigationRef = React.createRef();
+
+export function navigate(name, params) {
+  navigationRef.current?.navigate(name, params);
+}
+```
+- Assing it to reference of *NavigationContainer*
+```JavaScript
+<NavigationContainer ref={navigationRef}>
+            <Stack.Navigator
+            screenOptions={{
+                headerShown: false
+            }}
+        >
+````
+
+
 - Also,I've added tabbar navigation with *react-navigation*
 ```JavaScript
  <Tab.Navigator
