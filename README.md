@@ -41,7 +41,7 @@ export function navigate(name, params) {
         >
 ````
 
-- Routing main page after the wrote tweet
+- Routing to main page after the wrote tweet
 ```JavaScript
 const loginSuccess = (dispatch, user) => {
     dispatch({
