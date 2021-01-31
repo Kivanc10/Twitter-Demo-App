@@ -93,12 +93,22 @@ this.props.navigation.navigate("Inside",{
  
 
   
+## Installation and Using
 
+```JavaScript
+"scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  }
+```
 
-
-
-
-
+- git `clone my_git_addresss`
+- If you have not expo `npm install -g expo-cli` or `yarn global add expo-cli`
+- Open this repo in your code editor
+- Then , `expo start`
 
 
 
