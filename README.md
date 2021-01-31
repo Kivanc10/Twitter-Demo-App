@@ -76,9 +76,16 @@ this.props.navigation.navigate("Inside",{
   
   </tr>
  
+  <tr>
+  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210127-204928-1.gif" align="right" width = "300" height = 650 /></td>
+  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013641.jpg" align="left" width = "300" height = 650 /></td>
+  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012652.jpg" align="right" width = "300" height = 650 /></td>
+  </tr>
+    
   </table>
  
- 
+
+  
 
 
 
