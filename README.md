@@ -106,6 +106,8 @@ this.props.navigation.navigate("Inside",{
 ```
 
 - git `clone my_git_addresss`
+- verify to whether npm have already installed `node –v`
+- `npm install --global yarn` 
 - If you have not expo `npm install -g expo-cli` or `yarn global add expo-cli`
 - Open this repo in your code editor
 - Then , `expo start`
