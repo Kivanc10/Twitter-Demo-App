@@ -62,10 +62,18 @@ this.props.navigation.navigate("Inside",{
 # Images from App
 <br><br>
 
- <img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012350.jpg" align="left" width = "33%" height = 650 />
+ <table>
+  <tr>
+   <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012350.jpg" align="left" width = "300" height = 650 /></td>
+    <td> <img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012342.jpg" align="right" width = "300" height = 650 /></td>
+    <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = "300" height = 650 /></td>
+   </tr>
+  
+  
+  </table>
+ 
+ 
 
-
- <img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012342.jpg" align="right" width = "33%" height = 650 />
 
 
 
