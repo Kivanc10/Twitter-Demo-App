@@ -60,3 +60,7 @@ this.props.navigation.navigate("Inside",{
 
 
 # Visuals
+
+<img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012350.jpg" align="left" width = 320 height = 650 />
+<img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012342.jpg" align="right" width = 320 height = 650 />
+<img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = 320 height = 650 />
