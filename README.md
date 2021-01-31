@@ -89,7 +89,8 @@ this.props.navigation.navigate("Inside",{
 
 <img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012652.jpg" align="right" width = "33%" height = 650 />
 
+<img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013626.jpg" align="left" width = "33%" height = 650 />
 
 
 
-
+<img src= "https://github.com/Kivanc10/linux_files/blob/master/img/IMG_20210128_005721.jpg" align="right" width = "33%" height = 650 />
