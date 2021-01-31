@@ -56,6 +56,10 @@ this.props.navigation.navigate("Inside",{
         ...
 ```
 
+*Some inabilities according to Real Twitter:*
+- Notifications and Messages are not dynamic
+- Some dataframe operations might be slowly because of the *firebase*
+
 ## Badges
 
 
