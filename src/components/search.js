@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import { Text, View, Image, StyleSheet, Button, TextInput, FlatList, TouchableOpacity } from "react-native";
-import { SearchHeader, Card } from "./common";
+import { SearchHeader, Card ,SearchResults} from "./common";
 import { connect } from "react-redux";
 import { fetchTweet } from "../actions";
 import _ from 'lodash';
-const KEYS_TO_FILTERS = ['user.name', 'subject'];
+import * as NavigationServices from "../navigationServices";
+
 
 class Search extends Component {
     state = {
         searchTerm: "",
-        IsData : false,
-        result : []
+        IsData: false,
+        result: []
     }
 
     componentDidMount() {
@@ -30,22 +31,43 @@ class Search extends Component {
         //const tweet_name = (item.tweet.tweet == undefined) ? (item.tweet) : (item.tweet.tweet);
         //const filteredEmails = tweetList.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
         return (
-            <View>
-                <Text>{item.email}</Text>
-            </View>
+        <TouchableOpacity onPress={() => NavigationServices.navigate("UserSelfPage",{ 
+            user_name : item.email
+         })}>
+             <SearchResults>
+              <Text style={{fontWeight : "bold"}}>{item.email}</Text>
+         </SearchResults>
+        </TouchableOpacity>
         )
     }
 
     onSearchUsers() {
         const { tweetList } = this.props;
-        const {result} = this.state;
+        const { result } = this.state;
 
-        
+
         this.setState({
-            result : []
+            result: []
         })
     }
 
+
+
+    temp() {
+        return (
+            <View style={styles.image_style}>
+               <View style={styles.section_1}>
+               <Image
+                    source={require("../../assets/search.png")}
+                    style={styles.icon_1}
+                />
+               </View>
+               <View>
+                   <Text style={styles.imageText}>You can search whole users from here</Text>
+               </View>
+            </View>
+        )
+    }
 
 
     render() {
@@ -58,7 +80,7 @@ class Search extends Component {
                 result.unshift(tweet)
         })
 
-       
+
 
         return (
             <View style={styles.container}>
@@ -68,17 +90,17 @@ class Search extends Component {
                     />
                 </View>
                 <View style={styles.searchMainImage}>
-                    <Image source={require("../../assets/nature.jpg")} style={styles.mainImageStyle} />
+                    <Image source={require("../../assets/infinity.jpg")} style={styles.mainImageStyle} />
                 </View>
 
                 <View style={styles.searchresults}>
-                {this.state.searchTerm != "" ? <FlatList
+                    {this.state.searchTerm != "" ? <FlatList
                         data={result}
                         renderItem={this.renderItem.bind(this)}
                         keyExtractor={(item) => item.uid}
-                    /> : <Text>Arama çubuğuna herhangi birşey yazın</Text>}
-                    
-                </View>                
+                    /> : <Text>{this.temp()}</Text>}
+
+                </View>
             </View>
         )
     }
@@ -103,10 +125,29 @@ const styles = StyleSheet.create({
         width: "100%"
     },
     searchresults: {
-        height: 200
+        height: 350
     },
     denemeButton: {
 
+    },
+    image_style: {
+        flex : 1
+    },
+    icon_1 : {
+        height : 120,
+        width : 120,
+        marginLeft : 120,
+        marginTop : 50
+    },
+    section_1 : {
+        
+    },
+    imageText : {
+        color : "rgb(93,165,249)",
+        fontWeight : "bold",
+        justifyContent : "center",
+        marginLeft : 65,
+        marginTop : 25
     }
 })
 

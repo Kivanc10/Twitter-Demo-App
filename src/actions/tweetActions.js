@@ -5,6 +5,7 @@ import firebase from "firebase";
 import { cos } from "react-native-reanimated";
 const REF_DATABASE = "/tweets";
 export const FETCH_TWEET = "fetch_tweet";
+export const DELETE_TWEET = "delete_tweet";
 import * as NavigationServices from "../navigationServices";
 
 export const tweetChanged = (tweet) => {
@@ -65,4 +66,17 @@ export const updateTweet = ({uid,email,tweet}) => {
         })
     }
 
+}
+
+export const deleteTweet = (uid) => {
+    return (dispatch) => {
+        firebase.database().ref(REF_DATABASE + "/" + uid)
+        .remove()
+        .then(() => {
+            NavigationServices.navigate("Inside")
+            dispatch({
+                type : DELETE_TWEET
+            })
+        })
+    }
 }

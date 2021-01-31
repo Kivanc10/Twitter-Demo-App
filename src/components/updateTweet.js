@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import * as NavigationServices from "../navigationServices";
 import { TextArea, MyButton } from "./common";
-import { tweetChanged,updateTweet } from "../actions";
+import { tweetChanged,updateTweet,deleteTweet } from "../actions";
 import { connect } from "react-redux"
 
 
@@ -33,6 +33,12 @@ class UpdateTweet extends Component {
         tweet : olan ise , güncellenmiş hali
         */
         this.props.updateTweet(tweetObj);
+    }
+
+    onDeleteTweet() {
+        const {uid} = this.props.route.params.tweet;
+
+        this.props.deleteTweet(uid);
     }
 
     render() {
@@ -67,7 +73,7 @@ class UpdateTweet extends Component {
                 <View style={styles.delete_btn_style}>
                     <MyButton
                         spinner={false}
-                        onPress={() => alert("It was deleted")}
+                        onPress={this.onDeleteTweet.bind(this)}
                         backgroundColor="rgb(29,161,242)"
                         text="Delete Tweet"
                     />
@@ -120,4 +126,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { tweetChanged,updateTweet })(UpdateTweet);
+export default connect(mapStateToProps, { tweetChanged,updateTweet,deleteTweet })(UpdateTweet);
