@@ -9,6 +9,41 @@
 - I've ensured update or deleted tweet you wrote
 - Search user from databases in the search section
 - Also,I've supplied to send params between different pages with *react-navigation*
+
+
+# Images from App
+<br><br>
+
+ <table>
+  <tr>
+   <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012350.jpg" align="left" width = "300" height = 650 /></td>
+    <td> <img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012342.jpg" align="right" width = "300" height = 650 /></td>
+    <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = "300" height = 650 /></td>
+   </tr>
+  
+  <tr>
+   <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = "300" height = 650 /></td>
+  <td><img src="https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210128-010050-1.gif" align="right" width = "300" height = 650 /></td>
+  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210128-005807.jpg" align="left" width = "300" height = 650 /></td>
+  
+  </tr>
+ 
+  <tr>
+  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210127-204928-1.gif" align="right" width = "300" height = 650 /></td>
+  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013641.jpg" align="left" width = "300" height = 650 /></td>
+  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012652.jpg" align="right" width = "300" height = 650 /></td>
+  </tr>
+    
+  
+  <tr>
+  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013626.jpg" align="left" width = "300" height = 650 /></td>
+  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/IMG_20210128_005721.jpg" align="right" width = "300" height = 650 /></td>
+  </tr>
+
+  
+  </table>
+
+- I've supplied to send params between different pages with *react-navigation*
 ```JavaScript
 <Text>
 ...
@@ -101,40 +136,8 @@ const persistConfig = {
 - Notifications and Messages are not dynamic
 - Some dataframe operations might be slowly because of the *firebase*
 
-## Badges
 
 
-# Images from App
-<br><br>
-
- <table>
-  <tr>
-   <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012350.jpg" align="left" width = "300" height = 650 /></td>
-    <td> <img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012342.jpg" align="right" width = "300" height = 650 /></td>
-    <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = "300" height = 650 /></td>
-   </tr>
-  
-  <tr>
-   <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013428.jpg" align="left" width = "300" height = 650 /></td>
-  <td><img src="https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210128-010050-1.gif" align="right" width = "300" height = 650 /></td>
-  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210128-005807.jpg" align="left" width = "300" height = 650 /></td>
-  
-  </tr>
- 
-  <tr>
-  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/SVID-20210127-204928-1.gif" align="right" width = "300" height = 650 /></td>
-  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013641.jpg" align="left" width = "300" height = 650 /></td>
-  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-012652.jpg" align="right" width = "300" height = 650 /></td>
-  </tr>
-    
-  
-  <tr>
-  <td><img src = "https://github.com/Kivanc10/linux_files/blob/master/img/Screenshot_20210131-013626.jpg" align="left" width = "300" height = 650 /></td>
-  <td><img src= "https://github.com/Kivanc10/linux_files/blob/master/img/IMG_20210128_005721.jpg" align="right" width = "300" height = 650 /></td>
-  </tr>
-
-  
-  </table>
  
 
   
